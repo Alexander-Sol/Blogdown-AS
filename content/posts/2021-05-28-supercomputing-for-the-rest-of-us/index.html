@@ -1,0 +1,128 @@
+---
+title: Supercomputing for the Rest of Us
+author: Alexander
+date: '2021-05-28'
+slug: []
+categories: []
+tags: []
+meta_img: images/image.png
+description: A brief guide to setting up R on Carbonate @ IU
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p><br></br></p>
+<div id="using-r-on-indiana-universitys-high-performance-computing-hpc-clusters" class="section level2">
+<h2>Using R on Indiana University’s High Performance Computing (HPC) Clusters</h2>
+<p>When working with bioinformatics data, it’s almost inevitable that you’ll encounter a problem that can’t be solved using your local machine. Whether you’re processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you’ll need some additional computational firepower to get the job done. This guide will show you how to use some of IU’s HPC resources (namely, Carbonate and Slate) to process datasets too unwieldy and solve problems too complex for the average desktop PC.</p>
+<p>This post will walk you through setting up a HPC account, connecting to Carbonate via SSH, and configuring R to work with
+Carbonate. It is designed to be accessible and easy to understand, even if you haven’t worked with the command line before.</p>
+<p><strong>Note:</strong> Carbonate is IU’s solution to big data/machine learning problems. It is separate from Big Red, the IU supercomputer you may be familiar with. If you want to learn how to use Big Red, I recommend checking out <a href="https://godzillabutnicer.com/how-to-use-python-on-hpc-for-indiana-university-students/">this post</a>. Carbonate, Slate, and Big Red are only available to those affiliated with Indiana University (generally; graduate students, faculty, or staff.)</p>
+<p><br></br></p>
+<div id="creating-a-carbonate-account" class="section level3">
+<h3>Creating a Carbonate Account</h3>
+<p><img src="images/CreateAccountButton.png" title="Click me, click me!" alt="Click me, click me!" width="18%" style="float:right; padding-right:5px; padding-left:30px; padding-top:5px; padding-bottom:5px" style="display: block; margin: auto;" /></p>
+<p>The first step is to create a Carbonate account. Navigate to <a href="https://access.iu.edu/Accounts">access.iu.edu/Accounts</a>, click the “Create Account” button, and select Carbonate. The account creation process takes ~15 minutes. Sit tight and wait for an email to arrive, informing you that your new account is fired up and ready to go.</p>
+<p><br></br></p>
+</div>
+<div id="using-ssh" class="section level3">
+<h3>Using SSH</h3>
+<p>Now that your account is online, it’s time to access Carbonate for the first time! This can be done using SSH, or Secure Shell Protocol, a method that allow users to securely access servers by encrypting incoming and outgoing information. First, open up Command Prompt (Windows) or Terminal (Mac). Then, using the same username you use to login to your IU accounts, enter the following:</p>
+<pre class="bash"><code>ssh username@carbonate.uits.iu.edu</code></pre>
+<p>A prompt will ask for your password, followed by a second prompt asking how you’d like to go about 2-factor authentication. Type in your password, verify it’s you, and you should be good to go.</p>
+<p>If you encounter problems when logging in, it’s important to take a step back and figure out what’s gone wrong. Repeated, failed login attempts can result in your ip address being banned. If this happens, you’ll get an error message that looks something like this.</p>
+<p><br></br></p>
+<p><img src="images/CarbonateErrorMessage.png" title="Something's gone terribly wrong..." alt="Something's gone terribly wrong..." width="60%" style="display: block; margin: auto;" />
+<br></br></p>
+<p>If you <em>do</em> see a message like this, just ask the <a href="https://rt.iu.edu/support/index.html">fine folks at UITS Research Technologies</a> for help. They should be able to get you on the right track. (To be honest, if you’re struggling with any part of this guide, you could do worse than reaching out to them. The people over there are prompt, helpful, and unfailingly nice.)</p>
+<p><br></br></p>
+</div>
+<div id="requesting-resources-and-loading-r" class="section level3">
+<h3>Requesting Resources and Loading R</h3>
+<p><img src="images/SlurmMckenzie.png" title="It's highly addictive!" alt="It's highly addictive!" width="40%" style="float:right; padding-right:5px; padding-left:30px; padding-top:5px; padding-bottom:5px" style="display: block; margin: auto;" />
+Once you’re connected to Carbonate, you’re basically a guest in someone else’s computer, so be sure to mind your P’s and Q’s. Unfortunately, unix environments don’t generally recognize the “please” command: You’ll need some other way to ask the system for the resources you need. That’s where slurm comes in.</p>
+<p><strong>Slurm</strong> is a workload manager that controls how computing resources are doled out. To ensure that you have access to the necessary computing power, you need to to request an interactive session, in debug mode, for a total of one hour. This is done with the following command:</p>
+<pre class="bash"><code>srun -p debug -N 1 --time=01:00:00 --pty bash</code></pre>
+<p>(Note, debug mode limits the amount of computing resources available, but minimizes wait time) Next, check what versions of R are available on Carbonate. At the time of writing, the most recent version hosted on Carbonate was R 4.0.4</p>
+<pre class="bash"><code>module avail</code></pre>
+<p>Running the above code will return a list of all available programs, packages, and languages available on Carbonate. In the STATMATH section of the list, the available versions of R will be listed. Once you determine the latest version of R that’s available, you’re ready to move to the next step.</p>
+<p><br></br></p>
+</div>
+<div id="configuring-r" class="section level3">
+<h3>Configuring R</h3>
+<div id="using-the-command-line" class="section level4">
+<h4>Using the Command Line</h4>
+<p>When using RStudio on a local machine, all the necessary configuration is handled behind the scenes. For example, you don’t have to tell R where to go to download new packages or where the new packages should be stored. When working on Carbonate, things aren’t quite so easy. Luckily, manually configuring R isn’t terribly difficult, it just requires a little bit of maneuvering on the command line. Here’s a quick primer on bash commands, in case you haven’t used the command line or worked in a unix environment before.</p>
+<pre class="bash"><code>pwd #get the current working directory
+cd #return to the home directory
+cd Some/New/Directory #Navigate to a different directory
+cd .. #Go one directory up
+ls #list all files and folders in the current directory
+ls -a #List all files, including hidden files (ex: .hidden_file.txt)
+mkdir #Create a new directory
+cat InterestingData.txt #read data from files
+vi/vim NewScript.R #Creates a new file and opens it in a command line text editor</code></pre>
+<p><br></br></p>
+</div>
+<div id="setting-up-your-.renviron" class="section level4">
+<h4>Setting Up Your .Renviron</h4>
+<p>Start by creating a local directory to store R packages. First, check that you’re in your home directory, then create a new directory called R. Next, navigate to the new directory and create a subdirectory for the version of R that you’ll be working with (either 4.0.4 or the most recent version available on Carbonate.) Finally, return to your home directory.</p>
+<pre class="bash"><code>pwd #This should return /N/u/username/Carbonate
+mkdir R #Create R directory
+cd R #Go to R directory
+mkdir 4.0.4 #Create version 4.0.4 directory
+cd 4.0.4 #Go to 4.0.4 directory
+mkdir library #Create &#39;library&#39; directory, the location where packages will be stored
+ls #Confirm the new directory was created
+cd  #Return to the home directory</code></pre>
+<p>Now that the directory has been created, R has to be told to use this location to store packages. This can be done with an .Renviron file. You’ll have to create a file called .Renviron and use it to point to the location of your new library directory. Then, whenever R attempts to install or load a file, it will this directory.</p>
+<p>A quick note before you begin: You’ll have to use vim to edit the .Renviron file. Vim is… weird, man. If you’ve never worked with it before, it can be a little intimidating. It was first released in 1991 (30 years ago!), and it feels every bit as old as it is. <a href="https://eastmanreference.com/a-quick-start-guide-for-beginners-to-the-vim-text-editor">Here’s a handy reference to vim commands to get you started.</a></p>
+<pre class="bash"><code>pwd #Make sure this returns /N/u/username/Carbonate
+vim .Renviron #This opens up vim, where you can edit your new file
+
+#When in vim, press &quot;i&quot; to enter INSERT mode, where you can freely add text. Then, enter
+R_LIBS_USER=&quot;~/R/4.0.4/library&quot;
+#Hit the escape key to exit INSERT mode, then type &quot;:x&quot; to exit vim</code></pre>
+<p><br></br></p>
+</div>
+<div id="setting-up-your-.rprofile" class="section level4">
+<h4>Setting Up Your .Rprofile</h4>
+<p>Now R knows where to download new packages <em>to</em>, we still have to specify where R should download files <em>from</em>. This is done in your .Rprofile. You’ll create this file and with the same methods you used to create the .Renviron, then write/copy and paste a couple lines of code instructing R to download packages from the CRAN repository hosted by IU.</p>
+<pre class="bash"><code>vim .Rprofile #Create your Rprofile</code></pre>
+<p>Then, enter the following</p>
+<pre class="r"><code>local({
+    r &lt;- getOption(&quot;repos&quot;)
+    r[&quot;CRAN&quot;] &lt;- &quot;http://ftp.ussg.iu.edu/CRAN/&quot; #Specify the CRAN mirror hosted by IU
+    options(repos = r)
+})</code></pre>
+<p>Once you’ve exited vim (remember, “:x”), you can start installing packages!</p>
+<p><br></br></p>
+</div>
+</div>
+<div id="installing-packages" class="section level3">
+<h3>Installing Packages</h3>
+<p>When installing packages in R, external tools are sometimes required in order for the package to compile and install correctly. Usually, all that’s needed is a compiler for a different programming language, such as C++ or Fortran. Luckily, Carbonate has these tools pre-installed. For most packages, you only need to load one module: Boost, a collection of C++ source libraries. At the command line, enter the following.</p>
+<pre class="bash"><code>module load r/4.0.4 #First, load the latest version of R
+module load boost</code></pre>
+<p>Now that boost and R are both loaded, you can begin installing packages! Of course, the packages you install are dependent on what you need to do, but there’s a couple that you’ll probably need no matter what. To begin, you’ll need to run R. This can be pretty tricky, so make sure you don’t make any mistakes entering this code:</p>
+<pre class="bash"><code>R</code></pre>
+<p>Now that R is running, you can interact with R through the terminal the same way you would in R Studio. When choosing which packages to install, I’d recommend starting out with the following</p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)
+install.packages(&quot;devtools&quot;)
+install.packages(&quot;BiocManager&quot;)
+install.packages(&quot;Seurat&quot;)</code></pre>
+<p>And that’s it. R is officially installed! When you’re finished, you can exit R with the q() command, then sever the ssh connection by simply typing ‘exit’.</p>
+<p>Look out for the next post, where I’ll outline how to submit batch jobs, request more memory, and upload/download files.</p>
+<p><br></br></p>
+</div>
+<div id="ps-troubleshooting-installation-errors" class="section level3">
+<h3>PS: Troubleshooting Installation Errors</h3>
+<p>There’s a chance that you’ll see the following error when attempting to install a package</p>
+<pre class="bash"><code>unable to load shared object symbol not recognized: RegFreeA</code></pre>
+<p><br></br>
+If that pops up, exit R and unload the boost module (ie.)</p>
+<pre class="bash"><code>module unload boost</code></pre>
+<p>then, retry the package installation.</p>
+</div>
+</div>

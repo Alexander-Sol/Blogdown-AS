@@ -1,0 +1,40 @@
+baseURL: https://alexandersol.org
+languageCode: en-us
+title: Ezhil
+theme: ezhil
+paginate: 5
+copyright: © Copyright notice
+pygmentsstyle: solarized-dark
+pygmentscodefences: yes
+pygmentscodefencesguesssyntax: yes
+googleAnalytics: UA-123-45
+disqusShortname: ezhil-demo
+summaryLength: 20
+params:
+  disableDisqusTypes: page
+  featherIconsCDN: yes
+  mode: auto
+  social:
+    - icon: github
+      name: Github
+      url: https://github.com/vividvilla/ezhil
+    - icon: rss
+      name: RSS
+      url: /index.xml
+  subtitle: Clean and minimal personal [blog theme for Hugo](https://github.com/vividvilla/ezhil)
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: All posts
+      url: /posts
+      weight: 2
+    - name: About
+      url: /about
+      weight: 3
+    - name: Tags
+      url: /tags
+      weight: 4
+taxonomies:
+  tag: tags
