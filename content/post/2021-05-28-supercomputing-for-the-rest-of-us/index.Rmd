@@ -9,13 +9,12 @@ meta_img: images/image.png
 description: A brief guide to setting up R on Carbonate @ IU
 ---
 
-<br></br>
 
-## Using R on Indiana University's High Performance Computing (HPC) Clusters  
-
+## Using R on Indiana University's High Performance Computing (HPC) Cluster 
 
 
-When working with bioinformatics data, it's almost inevitable that you'll encounter a problem that can't be solved using your local machine. Whether you're processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you'll need some additional computational firepower to get the job done. This guide will show you how to use some of IU's HPC resources (namely, Carbonate and Slate) to process datasets too unwieldy and solve problems too complex for the average desktop PC.
+
+When working with bioinformatics data, it's only a matter of time until you encounter a problem too big to solve using your local machine. [Transcriptomics is growing exponentially](https://www.nature.com/articles/nprot.2017.149), but lab budgets are not. Whether you're processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you'll need additional computational firepower to get the job done. This guide will show you how to get started using IU's HPC resources (namely, Carbonate and Slate). 
 
 This post will walk you through setting up a HPC account, connecting to Carbonate via SSH, and configuring R to work with 
 Carbonate. It is designed to be accessible and easy to understand, even if you haven't worked with the command line before.
@@ -179,7 +178,6 @@ There's a chance that you'll see the following error when attempting to install 
 ```{bash, eval = FALSE}
 unable to load shared object symbol not recognized: RegFreeA
 ```
-<br></br>
 If that pops up, exit R and unload the boost module (ie.)
 ```{bash, eval = FALSE}
 module unload boost
