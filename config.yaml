@@ -11,6 +11,7 @@ googleAnalytics: UA-123-45
 disqusShortname: ezhil-demo
 summaryLength: 20
 params:
+  refLinksErrorLevel: WARNING
   disableDisqusTypes: page
   featherIconsCDN: yes
   mode: auto
