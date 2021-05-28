@@ -13,7 +13,7 @@
       <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://alexandersol.org/2021/05/28/supercomputing-for-the-rest-of-us/</guid>
-      <description>Using R on Indiana University’s High Performance Computing (HPC) Clusters When working with bioinformatics data, it’s almost inevitable that you’ll encounter a problem that can’t be solved using your local machine. Whether you’re processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you’ll need some additional computational firepower to get the job done. This guide will show you how to use some of IU’s HPC resources (namely, Carbonate and Slate) to process datasets too unwieldy and solve problems too complex for the average desktop PC.</description>
+      <description>Using R on Indiana University’s High Performance Computing (HPC) Cluster When working with bioinformatics data, it’s only a matter of time until you encounter a problem too big to solve using your local machine. Transcriptomics is growing exponentially, but lab budgets are not. Whether you’re processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you’ll need additional computational firepower to get the job done.</description>
     </item>
     
     <item>

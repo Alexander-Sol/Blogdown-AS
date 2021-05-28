@@ -78,10 +78,9 @@
 <script src="https://alexandersol.org/2021/05/28/supercomputing-for-the-rest-of-us/index_files/header-attrs/header-attrs.js"></script>
 
 
-<p><br></br></p>
-<div id="using-r-on-indiana-universitys-high-performance-computing-hpc-clusters" class="section level2">
-<h2>Using R on Indiana University’s High Performance Computing (HPC) Clusters</h2>
-<p>When working with bioinformatics data, it’s almost inevitable that you’ll encounter a problem that can’t be solved using your local machine. Whether you’re processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you’ll need some additional computational firepower to get the job done. This guide will show you how to use some of IU’s HPC resources (namely, Carbonate and Slate) to process datasets too unwieldy and solve problems too complex for the average desktop PC.</p>
+<div id="using-r-on-indiana-universitys-high-performance-computing-hpc-cluster" class="section level2">
+<h2>Using R on Indiana University’s High Performance Computing (HPC) Cluster</h2>
+<p>When working with bioinformatics data, it’s only a matter of time until you encounter a problem too big to solve using your local machine. <a href="https://www.nature.com/articles/nprot.2017.149">Transcriptomics is growing exponentially</a>, but lab budgets are not. Whether you’re processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you’ll need additional computational firepower to get the job done. This guide will show you how to get started using IU’s HPC resources (namely, Carbonate and Slate).</p>
 <p>This post will walk you through setting up a HPC account, connecting to Carbonate via SSH, and configuring R to work with
 Carbonate. It is designed to be accessible and easy to understand, even if you haven’t worked with the command line before.</p>
 <p><strong>Note:</strong> Carbonate is IU’s solution to big data/machine learning problems. It is separate from Big Red, the IU supercomputer you may be familiar with. If you want to learn how to use Big Red, I recommend checking out <a href="https://godzillabutnicer.com/how-to-use-python-on-hpc-for-indiana-university-students/">this post</a>. Carbonate, Slate, and Big Red are only available to those affiliated with Indiana University (generally; graduate students, faculty, or staff.)</p>
@@ -186,8 +185,7 @@ install.packages(&quot;Seurat&quot;)</code></pre>
 <h3>PS: Troubleshooting Installation Errors</h3>
 <p>There’s a chance that you’ll see the following error when attempting to install a package</p>
 <pre class="bash"><code>unable to load shared object symbol not recognized: RegFreeA</code></pre>
-<p><br></br>
-If that pops up, exit R and unload the boost module (ie.)</p>
+<p>If that pops up, exit R and unload the boost module (ie.)</p>
 <pre class="bash"><code>module unload boost</code></pre>
 <p>then, retry the package installation.</p>
 </div>
