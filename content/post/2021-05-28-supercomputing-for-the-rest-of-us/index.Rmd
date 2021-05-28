@@ -48,7 +48,7 @@ If you encounter problems when logging in, it's important to take a step back an
 
 <br></br>
 
-```{r, fig.align='center', fig.alt = "Something's gone terribly wrong...", out.width="60%", echo=FALSE}
+```{r, fig.align='center', fig.alt = "Something's gone terribly wrong...", out.width="95%", echo=FALSE}
 knitr::include_graphics("images/CarbonateErrorMessage.png", error = FALSE)
 ```
 <br></br>
