@@ -12,6 +12,7 @@ disqusShortname: ezhil-demo
 summaryLength: 20
 params:
   refLinksErrorLevel: WARNING
+  ignoreErrors: error-remote-getjson
   disableDisqusTypes: page
   featherIconsCDN: yes
   mode: auto
