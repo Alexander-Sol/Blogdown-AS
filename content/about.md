@@ -4,4 +4,4 @@ title: About
 ---
 
 This is the first iteration of a blog. The proprietor of this blog is a PhD student
-interested in bioinformatics, rock climbing, and the [immortal soul of Atlantic Salmon](https://doi.org/10.1093/brain/awx180).
+interested in bioinformatics, rock climbing, and the [immortal soul of the Atlantic Salmon](https://doi.org/10.1093/brain/awx180).
