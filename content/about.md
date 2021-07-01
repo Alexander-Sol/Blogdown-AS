@@ -1,6 +1,7 @@
 ---
-date: "2016-05-05T21:48:51-07:00"
+date: "2021-07-01T16:50:03-07:00"
 title: About
 ---
 
-This is a "hello world" example website for the [**blogdown**](https://github.com/rstudio/blogdown) package. The theme was forked from [@jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme) and modified by [Yihui Xie](https://github.com/yihui/hugo-lithium).
+This is the first iteration of a blog. The proprietor of this blog is a PhD student
+interested in bioinformatics, rock climbing, and the [immortal soul of Atlantic Salmon](https://doi.org/10.1093/brain/awx180).
