@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Explaing CS to biologists and vice versa</title>
+    <title>Alexander Sol - A bio/informatics blog</title>
     <link>https://alexandersol.org/</link>
-    <description>Recent content on Explaing CS to biologists and vice versa</description>
+    <description>Recent content on Alexander Sol - A bio/informatics blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alexandersol.org/index.xml" rel="self" type="application/rss+xml" />
