@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on A blog built with Hugo</title>
+    <title>Abouts on Explaing CS to biologists and vice versa</title>
     <link>https://alexandersol.org/about/</link>
-    <description>Recent content in Abouts on A blog built with Hugo</description>
+    <description>Recent content in Abouts on Explaing CS to biologists and vice versa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 May 2021 16:50:03 -0700</lastBuildDate><atom:link href="https://alexandersol.org/about/index.xml" rel="self" type="application/rss+xml" />
