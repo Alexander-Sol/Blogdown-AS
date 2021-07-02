@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on A Hugo website</title>
+    <title>Posts on A blog built with Hugo</title>
     <link>https://alexandersol.org/post/</link>
-    <description>Recent content in Posts on A Hugo website</description>
+    <description>Recent content in Posts on A blog built with Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alexandersol.org/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Supercomputing for the Rest of Us</title>
-      <link>https://alexandersol.org/2021/05/28/supercomputing-for-the-rest-of-us/</link>
+      <link>https://alexandersol.org/supercomputing-for-the-rest-of-us/</link>
       <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://alexandersol.org/2021/05/28/supercomputing-for-the-rest-of-us/</guid>
+      <guid>https://alexandersol.org/supercomputing-for-the-rest-of-us/</guid>
       <description>Using R on Indiana University’s High Performance Computing (HPC) Cluster When working with bioinformatics data, it’s only a matter of time until you encounter a problem too big to solve using your local machine. Transcriptomics is growing exponentially, but lab budgets are not. Whether you’re processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you’ll need additional computational firepower to get the job done.</description>
     </item>
     

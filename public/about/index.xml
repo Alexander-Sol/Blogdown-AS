@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on A blog built with Hugo</title>
+    <link>https://alexandersol.org/about/</link>
+    <description>Recent content in Abouts on A blog built with Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 May 2021 16:50:03 -0700</lastBuildDate><atom:link href="https://alexandersol.org/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://alexandersol.org/about/about/</link>
+      <pubDate>Sat, 01 May 2021 16:50:03 -0700</pubDate>
+      
+      <guid>https://alexandersol.org/about/about/</guid>
+      <description>This is the first iteration of a blog. The proprietor of this blog is a PhD student interested in bioinformatics, rock climbing, and the immortal soul of the Atlantic Salmon.</description>
+    </item>
+    
+  </channel>
+</rss>

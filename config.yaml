@@ -1,6 +1,6 @@
 baseurl: https://alexandersol.org
 languageCode: en-us
-title: A Hugo website
+title: A blog built with Hugo
 theme: hugo-lithium
 googleAnalytics: ''
 disqusShortname: ''
@@ -11,11 +11,11 @@ ignoreFiles:
   - \.knit\.md$
   - \.utf8\.md$
 permalinks:
-  post: /:year/:month/:day/:slug/
+  post: /:slug/
 menu:
   main:
     - name: About
-      url: /about/
+      url: /about/about
     - name: GitHub
       url: https://github.com/Alexander-Sol
     - name: Twitter
