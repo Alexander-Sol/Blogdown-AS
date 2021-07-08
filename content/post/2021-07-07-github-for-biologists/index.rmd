@@ -139,7 +139,11 @@ When committing, it's important to add a message to help you remember what each 
 Now that the changes have been saved, it's time to _push_ your changes to Github so that your collaborators can see what you've done. This is also done from the terminal.
 
 ```{bash, eval = FALSE}
+<<<<<<< HEAD
 git push -u origin main
+=======
+git push origin main
+>>>>>>> 4299ccc1c3cb622def8daa65d5a777b927ac7b7b
 ```
 
 At this point, you'll be asked to enter your email address and PAT. Once you've given your credentials, you should be good to go! If you want, you can check your repo on Github, via a browser, to confirm your new files have been uploaded.
