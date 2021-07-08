@@ -62,7 +62,7 @@
 
   <article class="article">
     
-    <span class="article-duration">6 min read</span>
+    <span class="article-duration">7 min read</span>
     
 
     <h1 class="article-title">Github for Biologists</h1>
@@ -154,18 +154,16 @@ git commit -m &quot;Initial commit&quot;</code></pre>
 <div id="step-5-push-to-github" class="section level4">
 <h4>Step 5: Push to Github</h4>
 <p>Now that the changes have been saved, it’s time to <em>push</em> your changes to Github so that your collaborators can see what you’ve done. This is also done from the terminal.</p>
-<pre class="bash"><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-git push -u origin main
-=======
-git push origin main
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 4299ccc1c3cb622def8daa65d5a777b927ac7b7b</code></pre>
+<pre class="bash"><code>git push -u origin main</code></pre>
 <p>At this point, you’ll be asked to enter your email address and PAT. Once you’ve given your credentials, you should be good to go! If you want, you can check your repo on Github, via a browser, to confirm your new files have been uploaded.</p>
 <hr />
 </div>
 </div>
 <div id="caveats-disclaimers-erratum" class="section level3">
 <h3>Caveats, Disclaimers &amp; Erratum</h3>
-<p>Git is widely used and this guide barely scratches the surface of what it can do. Hundreds of thousands of words have been written explaining the best way to use Git, and the whole lot of them are only a google search away.I’ll only recommend one here: <a href="https://r-bio.github.io/intro-git-rstudio/">The R class’s introduction to Git</a>. That guide touches on RStudio’s Git GUI, which some might find easier/less initimidating.</p>
+<p>Git is widely used and this guide barely scratches the surface of what it can do. Hundreds of thousands of words have been written explaining the best way to use Git, and the whole lot of them are only a google search away.I’ll only recommend one here: <a href="https://r-bio.github.io/intro-git-rstudio/">The R class’s introduction to Git</a>. That guide touches on RStudio’s Git GUI, which some might find easier/less intimidating.</p>
+<p>It’s also important to note that <strong>Github has an upper limit on file size: 100 MB</strong>. You can’t push files larger than 1/10th of a GB, and it’s recommended that total repo size is kept under 1 GB. This means that scRNA-seq data can’t be shared via Github. However, I’d still recommend keeping your .rds files in the project directory. Just add these files to your .gitignore, as shown in the GithubForBiologists example repo.</p>
+<p>I’m currently working on a way to share processed scRNA-seq datasets via Slate Project, one of IU’s supercomputing resources. Keep an eye out for my next post, which will go over this process in detail. In the meantime, be sure to <a href="/supercomputing-for-the-rest-of-us/#creating-a-carbonate-account">sign up for a Slate account</a>.</p>
 </div>
 </div>
 
