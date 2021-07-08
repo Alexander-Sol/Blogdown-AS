@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on Alexander Sol - A bio/informatics blog</title>
+    <link>https://alexandersol.org/tags/github/</link>
+    <description>Recent content in github on Alexander Sol - A bio/informatics blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alexandersol.org/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github for Biologists</title>
+      <link>https://alexandersol.org/github-for-biologists/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexandersol.org/github-for-biologists/</guid>
+      <description>Collaborating using Git/hub and R-Studio When it comes to coding &amp;amp; data analysis, working with others can be a frustrating proposition. Links to files break when used on different machines, datasets become too large to share, and changes made in the code are impossible to keep straight. Luckily for us, a tool exists to solve (some) of these problems: Git. Git is a version control system. It allows you to take snapshots of your code as it changes over time.</description>
+    </item>
+    
+  </channel>
+</rss>

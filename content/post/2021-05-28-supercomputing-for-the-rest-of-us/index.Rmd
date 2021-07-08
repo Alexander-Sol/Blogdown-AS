@@ -12,8 +12,6 @@ description: A brief guide to setting up R on Carbonate @ IU
 
 ## Using R on Indiana University's High Performance Computing (HPC) Cluster 
 
-
-
 When working with bioinformatics data, it's only a matter of time until you encounter a problem too big to solve using your local machine. [Transcriptomics is growing exponentially](https://www.nature.com/articles/nprot.2017.149), but lab budgets are not. Whether you're processing a multi-terabyte DNA-methylation dataset or attempting a gene set enrichment analysis with a 7 day run time, eventually you'll need additional computational firepower to get the job done. When that day comes, this post will be here to help you bust out the big guns.  
 
 This post will guide you through setting up a HPC account, connecting to Carbonate via SSH, and configuring R to work with 
@@ -29,7 +27,7 @@ Carbonate. It is designed to be accessible and easy to understand, even if you h
 knitr::include_graphics("images/CreateAccountButton.png", error = FALSE)
 ```
 
-The first step is to create a Carbonate account. Navigate to [access.iu.edu/Accounts](https://access.iu.edu/Accounts), click the "Create Account" button, and select Carbonate. The account creation process takes ~15 minutes. Sit tight and wait for an email to arrive, informing you that your new account is fired up and ready to go.  
+The first step is to create a Carbonate account. Navigate to [access.iu.edu/Accounts](https://access.iu.edu/Accounts), click the "Create Account" button, and select Carbonate. The account creation process takes ~15 minutes. Sit tight and wait for an email to arrive, informing you that your new account is fired up and ready to go. While you're waiting, I'd recommend creating a Slate account as well.
 
 <br></br>
 

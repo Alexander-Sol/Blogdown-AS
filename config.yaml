@@ -23,7 +23,7 @@ menu:
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
-  description: Explaing CS to biologists and vice versa
+  description: Explaining CS to biologists and vice versa
   favicon: Logo_v1.ico
   highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
   highlightjsLang:
