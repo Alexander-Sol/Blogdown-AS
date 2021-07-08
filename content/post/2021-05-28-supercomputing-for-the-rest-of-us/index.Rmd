@@ -27,7 +27,7 @@ Carbonate. It is designed to be accessible and easy to understand, even if you h
 knitr::include_graphics("images/CreateAccountButton.png", error = FALSE)
 ```
 
-The first step is to create a Carbonate account. Navigate to [access.iu.edu/Accounts](https://access.iu.edu/Accounts), click the "Create Account" button, and select Carbonate. The account creation process takes ~15 minutes. Sit tight and wait for an email to arrive, informing you that your new account is fired up and ready to go.  
+The first step is to create a Carbonate account. Navigate to [access.iu.edu/Accounts](https://access.iu.edu/Accounts), click the "Create Account" button, and select Carbonate. The account creation process takes ~15 minutes. Sit tight and wait for an email to arrive, informing you that your new account is fired up and ready to go. While you're waiting, I'd recommend creating a Slate account as well.
 
 <br></br>
 

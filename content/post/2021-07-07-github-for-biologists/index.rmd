@@ -1,6 +1,6 @@
 ---
 title: Github for Biologists
-author: R package build
+author: Alexander
 date: '2021-07-07'
 slug: github-for-biologists
 categories: []
@@ -34,7 +34,7 @@ This post is specifically geared towards using Git in combination with R-Studio,
 
 ### Download and Setup
 
-To get started using Git, first [download the installer](https://git-scm.com/downloads). The default install location is within your user profile, which means you won't need admin rights to run the installer. So no need to call the IT department to get up and running. Once you've got the installer running, there's only one change I would recommend. While the default options are generally fine, there's been a recent change in naming conventions. The default "branch", or version, used to be called "master." However, now "main" is the preferred nomenclature. You will have to manually make the switch while running through the installer (shown below)
+To get started using Git, first [download Git for windows](https://gitforwindows.org/). If you're on a Mac or Linux machine, you get it [straight from the source](https://git-scm.com/downloads). The default install location is within your user profile, which means you won't need admin rights to run the installer. So, no need to call the IT department to get up and running. Once you've got the installer running, there's only one change I would recommend. While the default options are generally fine, there's been a recent change in naming conventions. The default "branch", or version, used to be called "master." However, now "main" is the preferred nomenclature. You will have to manually make the switch while running through the installer (shown below)
 
 ```{r, fig.align='center', fig.alt = "At least an order of magnitude less problematic", out.width="95%", echo=FALSE}
 knitr::include_graphics("images/DefaultBranch.png", error = FALSE)
@@ -46,7 +46,7 @@ Outside of that, the recommended settings are your best bet.
 
 ### Creating a New Project in R/Studio
 
-Now that git's installed, we can begin using it within the context of RStudio. Let's start by creating a new R Project from a Github repo. In RStudio, navigate to the 'File' menu and select 'New Project'. When asked what kind of project you'd like to create, select version control.
+Now that git's installed,you can begin using it within the context of RStudio. Let's start by creating a new R Project from a Github repo. In RStudio, navigate to the 'File' menu and select 'New Project'. When asked what kind of project you'd like to create, select version control.
 
 ```{r, fig.align='center', fig.alt = "Mmmmm..I love that new project smell", out.width="95%", echo=FALSE}
 knitr::include_graphics("images/RStudioVersionControl.png", error = FALSE)
@@ -65,6 +65,13 @@ knitr::include_graphics("images/DogHandshake.gif", error = FALSE)
 ### Creating a Github Account 
 
 While you don't need a github account to clone someone else's repo, you'll need an account if you want to upload code or collaborate on private repos. To sign up for a github account, simply go to [github.com/signup](https://github.com/signup). Github started as an open source project but was acquired by Microsoft in 2018. So, you know it's above board. 
+
+Once your Github account has been created, there's a couple of hoops you need to jump through. To access Github from the command line or from within RStudio, you'll have to store your Github login information locally. However, instead of using your password, you'll need to store a Personal Access Token, or PAT. 
+
+[This guide shows you how to configure Git to store your PAT.](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
+
+And [this guide will walk you through creating a PAT.](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). You won't be asked to enter your login details until step 5, below, so make sure you save your new PAT until then.
+
 
 -----
 
@@ -92,13 +99,11 @@ knitr::include_graphics("images/NewRepoEx.png", error = FALSE)
 
 Make sure you choose a memorable name for your new repo.
 
------
 
 #### Step 2: Create a New R Project
 
-Now that you've created your own project, just follow the steps outlined above Example
+Now that you've created your own project, just follow the steps outlined above [Creating a New Project in R/Studio]
 
------
 
 #### Step 3: Drag and Drop the relevant files
 
@@ -109,8 +114,40 @@ knitr::include_graphics("images/DragAndDrop.gif", error = FALSE)
 ```
 
 
------
 #### Step 4: Initial Commit
 
-Saving changes via git is a two step process. First, you have to specify which files should be saved. This is called "Staging." 
+Saving changes via git is a two step process. First, you have to specify which files should be saved. This is called "Staging". Then, you have to actually save the staged files. This is done with a "Commit". 
+
+While RStudio has a GUI (graphical user interface) that you can use to control the Git workflow, I do most of my work from the command line. Luckily, you can access the command line from withing RStudio. The terminal can be found in the lower left of RStudio. Tabbing over will replace the standard R console with the command line. 
+
+```{r, fig.align='center', fig.alt = "Probably didn't need to be this explicit ", out.width="75%", echo=FALSE}
+knitr::include_graphics("images/TerminalEx.png", error = FALSE)
+```
+
+Once you have the terminal pulled up, we can add _all_ files in the project directory and commit them with two commands
+
+```{bash, eval = FALSE}
+git add . # The '.' indicates that every file in the directory should be staged
+git commit -m "Initial commit"
+```
+
+When committing, it's important to add a message to help you remember what each commit entails. That way, you'll be able to retrace your steps, should you need revert to previous versions of your code. For the first commit in a new repository, "Initial commit" is the customary message. 
+
+
+#### Step 5: Push to Github
+
+Now that the changes have been saved, it's time to _push_ your changes to Github so that your collaborators can see what you've done. This is also done from the terminal.
+
+```{bash, eval = FALSE}
+git push -u origin main
+```
+
+At this point, you'll be asked to enter your email address and PAT. Once you've given your credentials, you should be good to go! If you want, you can check your repo on Github, via a browser, to confirm your new files have been uploaded.
+
+-----
+
+### Caveats, Disclaimers & Erratum
+
+Git is widely used and this guide barely scratches the surface of what it can do. Hundreds of thousands of words have been written explaining the best way to use Git, and the whole lot of them are only a google search away.I'll only recommend one here: [The R class's introduction to Git](https://r-bio.github.io/intro-git-rstudio/). That guide touches on RStudio's Git GUI, which some might find easier/less initimidating. 
+
 
