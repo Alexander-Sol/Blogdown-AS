@@ -64,7 +64,7 @@ knitr::include_graphics("images/DogHandshake.gif", error = FALSE)
 
 ### Creating a Github Account 
 
-While you don't need a github account to clone someone else's repo, you'll need an account if you want to upload code or collaborate on private repos. To sign up for a github account, simply go to [https://github.com/signup](https://github.com/signup). Github started as an open source project but was acquired by Microsoft in 2018. So, you know it's above board. 
+While you don't need a github account to clone someone else's repo, you'll need an account if you want to upload code or collaborate on private repos. To sign up for a github account, simply go to [github.com/signup](https://github.com/signup). Github started as an open source project but was acquired by Microsoft in 2018. So, you know it's above board. 
 
 -----
 
@@ -73,13 +73,16 @@ While you don't need a github account to clone someone else's repo, you'll need 
 To start your own version controlled project in R, the standard work flow is as follows: 
 
 1. Create a new repository on Github
-2. Create a new version-control project in R linked to the empty repository.
+2. Create a new version-control project in R linked to the empty repository
+3. Add relevant scripts, data, ect.
+4. Commit your files
+5. Push to your remote repository
 
 If you have existing R projects that you'd like to upload to Github, you can use [RStudio's official guide](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN), however, linking a new project to an empty repo is the simplest approach. Once you've created a brand new project, it's easy to *add* scripts, data, and folders, *commit* your changes, and *push* the updated project to your remote repo. The remainder of the project will walk you through this process.
 
 ----
 
-### Step 1: The Repo
+#### Step 1: The Repo
 
 It's easy to create a new repo on github. Sign in to your account, go to [github.com](https://github.com), and click "New Repo".
 
@@ -88,11 +91,26 @@ knitr::include_graphics("images/NewRepoEx.png", error = FALSE)
 ```
 
 Make sure you choose a memorable name for your new repo.
------
-### Step 2: Create a new R Project
-
-Now that you've created your own project, just follow the steps outlined above [Creating a New Project in R/Studio](#Creating a New Project in R/Studio). 
 
 -----
-### Drag and Drop the relevant files
+
+#### Step 2: Create a New R Project
+
+Now that you've created your own project, just follow the steps outlined above Example
+
+-----
+
+#### Step 3: Drag and Drop the relevant files
+
+Now that you've opened your new project, it's time to begin fleshing it out. You can do this by creating new scripts or by copying existing files into the project folder. 
+
+```{r, fig.align='center', fig.alt = "Probably didn't need to be this explicit ", out.width="75%", echo=FALSE}
+knitr::include_graphics("images/DragAndDrop.gif", error = FALSE)
+```
+
+
+-----
+#### Step 4: Initial Commit
+
+When saving 
 
