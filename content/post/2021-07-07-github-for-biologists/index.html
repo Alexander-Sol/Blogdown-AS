@@ -29,14 +29,17 @@ tags:
 </div>
 <div id="download-and-setup" class="section level3">
 <h3>Download and Setup</h3>
-<p>To get started using Git, first <a href="https://gitforwindows.org/">download Git for windows</a>. If you’re on a Mac or Linux machine, you get it <a href="https://git-scm.com/downloads">straight from the source</a>. The default install location is within your user profile, which means you won’t need admin rights to run the installer. So, no need to call the IT department to get up and running. Once you’ve got the installer running, there’s only one change I would recommend. While the default options are generally fine, there’s been a recent change in naming conventions. The default “branch”, or version, used to be called “master.” However, now “main” is the preferred nomenclature. You will have to manually make the switch while running through the installer (shown below)</p>
-<p><img src="images/DefaultBranch.png" title="At least an order of magnitude less problematic" alt="At least an order of magnitude less problematic" width="95%" style="display: block; margin: auto;" /></p>
+<p>To get started using Git, first <a href="https://gitforwindows.org/">download Git for windows</a>. (If you’re on a Mac or Linux machine, you can get it <a href="https://git-scm.com/downloads">straight from the source</a>.) The default install location is within your user profile, which means you won’t need admin rights to run the installer. So no need to bother the guys over in the IT department.</p>
+<p>Once you’ve got the installer running, there’s only one change I would recommend. While the default options are generally fine, there’s been a recent change in naming conventions. The default “branch”, or version, used to be called “master.” However, now “main” is the preferred nomenclature. You will have to manually make the switch while running through the installer (shown below)
+<br></br>
+<img src="images/DefaultBranch.png" title="At least an order of magnitude less problematic" alt="At least an order of magnitude less problematic" width="95%" style="display: block; margin: auto;" /></p>
 <p>Outside of that, the recommended settings are your best bet.</p>
 <hr />
 </div>
 <div id="creating-a-new-project-in-rstudio" class="section level3">
 <h3>Creating a New Project in R/Studio</h3>
-<p>Now that git’s installed,you can begin using it within the context of RStudio. Let’s start by creating a new R Project from a Github repo. In RStudio, navigate to the ‘File’ menu and select ‘New Project’. When asked what kind of project you’d like to create, select version control.</p>
+<p>Now that Git’s installed, you can see how it works with RStudio. Let’s start by creating a new R Project from a Github repo. In RStudio, navigate to the ‘File’ menu and select ‘New Project’. When asked what kind of project you’d like to create, select version control.
+<br></br></p>
 <p><img src="images/RStudioVersionControl.png" title="Mmmmm..I love that new project smell" alt="Mmmmm..I love that new project smell" width="95%" style="display: block; margin: auto;" /></p>
 <p>Select ‘Git’, then paste the following link into the ‘Repository URL’ field: <a href="https://github.com/Alexander-Sol/GithubForBiologists" class="uri">https://github.com/Alexander-Sol/GithubForBiologists</a></p>
 <p>You should now be looking at a brand-new project! It contains a Readme, an .Rdata file, and a quick tutorial script that describes the Rdata file format and its use cases. Congratulations, you’ve just cloned your first Github repo! Welcome to the club.</p>
@@ -45,10 +48,13 @@ tags:
 </div>
 <div id="creating-a-github-account" class="section level3">
 <h3>Creating a Github Account</h3>
-<p>While you don’t need a github account to clone someone else’s repo, you’ll need an account if you want to upload code or collaborate on private repos. To sign up for a github account, simply go to <a href="https://github.com/signup">github.com/signup</a>. Github started as an open source project but was acquired by Microsoft in 2018. So, you know it’s above board.</p>
+<p>While you don’t need a github account to clone someone else’s repo, you’ll need an account if you want to upload your own code. To sign up for a Github account, simply go to <a href="https://github.com/signup">github.com/signup</a>. Github started as an open source project but was acquired by Microsoft in 2018. So it’s definitely above board.</p>
 <p>Once your Github account has been created, there’s a couple of hoops you need to jump through. To access Github from the command line or from within RStudio, you’ll have to store your Github login information locally. However, instead of using your password, you’ll need to store a Personal Access Token, or PAT.</p>
-<p><a href="https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git">This guide shows you how to configure Git to store your PAT.</a></p>
-<p>And <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">this guide will walk you through creating a PAT.</a>. You won’t be asked to enter your login details until step 5, below, so make sure you save your new PAT until then.</p>
+<ul>
+<li><p><a href="https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git">This guide shows you how to configure Git to store your PAT.</a></p></li>
+<li><p>And <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">this guide will walk you through creating a PAT</a>.</p></li>
+</ul>
+<p>You won’t be asked to enter your login details until step 5, below, so make sure you save your new PAT until then.</p>
 <hr />
 </div>
 <div id="a-repo-of-your-very-own" class="section level3">
@@ -61,7 +67,7 @@ tags:
 <li>Commit your files</li>
 <li>Push to your remote repository</li>
 </ol>
-<p>If you have existing R projects that you’d like to upload to Github, you can use <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">RStudio’s official guide</a>, however, linking a new project to an empty repo is the simplest approach. Once you’ve created a brand new project, it’s easy to <em>add</em> scripts, data, and folders, <em>commit</em> your changes, and <em>push</em> the updated project to your remote repo. The remainder of the project will walk you through this process.</p>
+<p>If you have existing R projects that you’d like to upload to Github, you should check out <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">RStudio’s official guide</a>. That being said, linking a new project to an empty repo is the easiest approach. Once you’ve created a brand new project, it’s easy to <em>add</em> scripts, data, and folders, <em>commit</em> your changes, and <em>push</em> the updated project to your remote repo. The remainder of the project will walk you through this process.</p>
 <hr />
 <div id="step-1-the-repo" class="section level4">
 <h4>Step 1: The Repo</h4>
