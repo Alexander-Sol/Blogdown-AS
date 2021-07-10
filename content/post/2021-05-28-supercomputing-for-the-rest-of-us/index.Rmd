@@ -19,7 +19,7 @@ Carbonate. It is designed to be accessible and easy to understand, even if you h
 
 **Note:** Carbonate is IU's solution to big data/machine learning problems. It is separate from Big Red, the IU supercomputer you may be familiar with. If you want to learn how to use Big Red, I recommend checking out [this post](https://godzillabutnicer.com/how-to-use-python-on-hpc-for-indiana-university-students/). Carbonate, Slate, and Big Red are only available to those affiliated with Indiana University (generally; graduate students, faculty, or staff.)
 
-<br></br>
+-----
 
 ### Creating a Carbonate Account
 
@@ -29,7 +29,7 @@ knitr::include_graphics("images/CreateAccountButton.png", error = FALSE)
 
 The first step is to create a Carbonate account. Navigate to [access.iu.edu/Accounts](https://access.iu.edu/Accounts), click the "Create Account" button, and select Carbonate. The account creation process takes ~15 minutes. Sit tight and wait for an email to arrive, informing you that your new account is fired up and ready to go. While you're waiting, I'd recommend creating a Slate account as well.
 
-<br></br>
+-----
 
 ### Using SSH
 
@@ -39,7 +39,7 @@ Now that your account is online, it's time to access Carbonate for the first tim
 ssh username@carbonate.uits.iu.edu
 ```
 
-A prompt will ask for your password, followed by a second prompt asking how you'd like to go about 2-factor authentication. Type in your password, verify it's you, and you should be good to go.
+A prompt will ask for your password, followed by a second prompt asking how you'd like to go about 2-factor authentication. When you enter your password at the command line, you won't see any characters appear or receive any other indication that you're actually typing. This is totally normal. Just type your password and press enter. Then, you'll be asked how you want to go about 2-factor authentication. Simply type 1, 2, or 3, hit enter, and verify it's you. Now you should be good to go.
 
 If you encounter problems when logging in, it's important to take a step back and figure out what's gone wrong. Repeated, failed login attempts can result in your ip address being banned. If this happens, you'll get an error message that looks something like this.   
 
@@ -52,7 +52,7 @@ knitr::include_graphics("images/CarbonateErrorMessage.png", error = FALSE)
 
 If you _do_ see a message like this, just ask the [fine folks at UITS Research Technologies](https://rt.iu.edu/support/index.html) for help. They should be able to get you on the right track. (To be honest, if you're struggling with any part of this guide, you could do worse than reaching out to them. The people over there are prompt, helpful, and unfailingly nice.)
 
-<br></br>
+-----
 
 ### Requesting Resources and Loading R
 
@@ -77,7 +77,7 @@ module avail
 
 Running the above code will return a list of all available programs, packages, and languages available on Carbonate. In the STATMATH section of the list, the available  versions of R will be listed. Once you determine the latest version of R that's available, you're ready to move to the next step.  
 
-<br></br>
+-----
 
 ### Configuring R  
   
@@ -95,7 +95,7 @@ mkdir #Create a new directory
 cat InterestingData.txt #read data from files
 vi/vim NewScript.R #Creates a new file and opens it in a command line text editor
 ```
-<br></br>
+-----
 
 #### Setting Up Your .Renviron
 Start by creating a local directory to store R packages. First, check that you're in your home directory, then create a new directory called R. Next, navigate to the new directory and create a subdirectory for the version of R that you'll be working with (either 4.0.4 or the most recent version available on Carbonate.) Finally, return to your home directory.
@@ -122,7 +122,7 @@ vim .Renviron #This opens up vim, where you can edit your new file
 R_LIBS_USER="~/R/4.0.4/library"
 #Hit the escape key to exit INSERT mode, then type ":x" to exit vim
 ```
-<br></br>
+-----
 
 #### Setting Up Your .Rprofile
 Now R knows where to download new packages _to_, we still have to specify where R should download files _from_. This is done in your .Rprofile. You'll create this file and with the same methods you used to create the .Renviron, then write/copy and paste a couple lines of code instructing R to download packages from the CRAN repository hosted by IU.
@@ -143,7 +143,7 @@ local({
 
 Once you've exited vim (remember, ":x"), you can start installing packages!  
 
-<br></br>
+-----
 
 ### Installing Packages
 
@@ -168,7 +168,7 @@ And that's it. R is officially installed! When you're finished, you can exit R w
 
 Look out for the next post, where I'll outline how to submit batch jobs, request more memory, and upload/download files. 
 
-<br></br>
+-----
 
 ### PS: Troubleshooting Installation Errors
 

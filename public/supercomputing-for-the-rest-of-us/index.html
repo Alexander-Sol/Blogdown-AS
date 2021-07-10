@@ -84,24 +84,24 @@
 <p>This post will guide you through setting up a HPC account, connecting to Carbonate via SSH, and configuring R to work with
 Carbonate. It is designed to be accessible and easy to understand, even if you haven’t worked with the command line before.</p>
 <p><strong>Note:</strong> Carbonate is IU’s solution to big data/machine learning problems. It is separate from Big Red, the IU supercomputer you may be familiar with. If you want to learn how to use Big Red, I recommend checking out <a href="https://godzillabutnicer.com/how-to-use-python-on-hpc-for-indiana-university-students/">this post</a>. Carbonate, Slate, and Big Red are only available to those affiliated with Indiana University (generally; graduate students, faculty, or staff.)</p>
-<p><br></br></p>
+<hr />
 <div id="creating-a-carbonate-account" class="section level3">
 <h3>Creating a Carbonate Account</h3>
 <p><img src="images/CreateAccountButton.png" title="Click me, click me!" alt="Click me, click me!" width="18%" style="float:right; padding-right:5px; padding-left:30px; padding-top:5px; padding-bottom:5px" style="display: block; margin: auto;" /></p>
 <p>The first step is to create a Carbonate account. Navigate to <a href="https://access.iu.edu/Accounts">access.iu.edu/Accounts</a>, click the “Create Account” button, and select Carbonate. The account creation process takes ~15 minutes. Sit tight and wait for an email to arrive, informing you that your new account is fired up and ready to go. While you’re waiting, I’d recommend creating a Slate account as well.</p>
-<p><br></br></p>
+<hr />
 </div>
 <div id="using-ssh" class="section level3">
 <h3>Using SSH</h3>
 <p>Now that your account is online, it’s time to access Carbonate for the first time! This can be done using SSH, or Secure Shell Protocol, a method that allow users to securely access servers by encrypting incoming and outgoing information. First, open up Command Prompt (Windows) or Terminal (Mac). Then, using the same username you use to login to your IU accounts, enter the following:</p>
 <pre class="bash"><code>ssh username@carbonate.uits.iu.edu</code></pre>
-<p>A prompt will ask for your password, followed by a second prompt asking how you’d like to go about 2-factor authentication. Type in your password, verify it’s you, and you should be good to go.</p>
+<p>A prompt will ask for your password, followed by a second prompt asking how you’d like to go about 2-factor authentication. When you enter your password at the command line, you won’t see any characters appear or receive any other indication that you’re actually typing. This is totally normal. Just type your password and press enter. Then, you’ll be asked how you want to go about 2-factor authentication. Simply type 1, 2, or 3, hit enter, and verify it’s you. Now you should be good to go.</p>
 <p>If you encounter problems when logging in, it’s important to take a step back and figure out what’s gone wrong. Repeated, failed login attempts can result in your ip address being banned. If this happens, you’ll get an error message that looks something like this.</p>
 <p><br></br></p>
 <p><img src="images/CarbonateErrorMessage.png" title="Something's gone terribly wrong..." alt="Something's gone terribly wrong..." width="95%" style="display: block; margin: auto;" />
 <br></br></p>
 <p>If you <em>do</em> see a message like this, just ask the <a href="https://rt.iu.edu/support/index.html">fine folks at UITS Research Technologies</a> for help. They should be able to get you on the right track. (To be honest, if you’re struggling with any part of this guide, you could do worse than reaching out to them. The people over there are prompt, helpful, and unfailingly nice.)</p>
-<p><br></br></p>
+<hr />
 </div>
 <div id="requesting-resources-and-loading-r" class="section level3">
 <h3>Requesting Resources and Loading R</h3>
@@ -112,7 +112,7 @@ Once you’re connected to Carbonate, you’re basically a guest in someone else
 <p>(Note, debug mode limits the amount of computing resources available, but minimizes wait time) Next, check what versions of R are available on Carbonate. At the time of writing, the most recent version hosted on Carbonate was R 4.0.4</p>
 <pre class="bash"><code>module avail</code></pre>
 <p>Running the above code will return a list of all available programs, packages, and languages available on Carbonate. In the STATMATH section of the list, the available versions of R will be listed. Once you determine the latest version of R that’s available, you’re ready to move to the next step.</p>
-<p><br></br></p>
+<hr />
 </div>
 <div id="configuring-r" class="section level3">
 <h3>Configuring R</h3>
@@ -128,7 +128,7 @@ ls -a #List all files, including hidden files (ex: .hidden_file.txt)
 mkdir #Create a new directory
 cat InterestingData.txt #read data from files
 vi/vim NewScript.R #Creates a new file and opens it in a command line text editor</code></pre>
-<p><br></br></p>
+<hr />
 </div>
 <div id="setting-up-your-.renviron" class="section level4">
 <h4>Setting Up Your .Renviron</h4>
@@ -149,7 +149,7 @@ vim .Renviron #This opens up vim, where you can edit your new file
 #When in vim, press &quot;i&quot; to enter INSERT mode, where you can freely add text. Then, enter
 R_LIBS_USER=&quot;~/R/4.0.4/library&quot;
 #Hit the escape key to exit INSERT mode, then type &quot;:x&quot; to exit vim</code></pre>
-<p><br></br></p>
+<hr />
 </div>
 <div id="setting-up-your-.rprofile" class="section level4">
 <h4>Setting Up Your .Rprofile</h4>
@@ -162,7 +162,7 @@ R_LIBS_USER=&quot;~/R/4.0.4/library&quot;
     options(repos = r)
 })</code></pre>
 <p>Once you’ve exited vim (remember, “:x”), you can start installing packages!</p>
-<p><br></br></p>
+<hr />
 </div>
 </div>
 <div id="installing-packages" class="section level3">
@@ -179,7 +179,7 @@ install.packages(&quot;BiocManager&quot;)
 install.packages(&quot;Seurat&quot;)</code></pre>
 <p>And that’s it. R is officially installed! When you’re finished, you can exit R with the q() command, then sever the ssh connection by simply typing ‘exit’.</p>
 <p>Look out for the next post, where I’ll outline how to submit batch jobs, request more memory, and upload/download files.</p>
-<p><br></br></p>
+<hr />
 </div>
 <div id="ps-troubleshooting-installation-errors" class="section level3">
 <h3>PS: Troubleshooting Installation Errors</h3>
